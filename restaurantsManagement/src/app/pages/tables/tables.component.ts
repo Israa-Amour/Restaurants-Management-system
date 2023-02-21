@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class TablesComponent {
 
+  numbers = Array.from(Array(12).keys()).map(x => x + 1);
+
+  cards = this.numbers.map(id => ({ id, status: 'Empty' }));
+
+  changeCardStatus(card: any) {
+    if (card.status === 'Busy') {
+      card.status = 'Busy';
+    } else {
+      card.status = 'Empty';
+    }
+  }
 }
