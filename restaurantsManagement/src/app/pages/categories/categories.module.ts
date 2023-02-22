@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { CategoriesRoutingModule } from './categories-routing.module';
 import { CategoriesComponent } from './categories.component';
+import { CategoryComponent } from './category/category.component';
 
 
 @NgModule({
   declarations: [
-    CategoriesComponent
+    CategoriesComponent,
+    CategoryComponent
   ],
   imports: [
     CommonModule,
@@ -15,8 +17,4 @@ import { CategoriesComponent } from './categories.component';
   ]
 })
 export class CategoriesModule { 
-
-  id!: number;
-  name!:string;
-  imageUrl!:string;
 }

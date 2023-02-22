@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { CategoriesModule } from 'src/app/pages/categories/categories.module';
+import { Category } from 'src/app/interfaces/category.interface';
 @Injectable({
   providedIn: 'root'
 })
-export class FoodService {
+export class CategoryService {
 
   constructor() { }
-  getAll(): CategoriesModule[] {
+  getAll(): Category[] {
     return [
       {
         id: 1,
@@ -88,4 +88,7 @@ export class FoodService {
     ]
 
   }
+
+
+
 }

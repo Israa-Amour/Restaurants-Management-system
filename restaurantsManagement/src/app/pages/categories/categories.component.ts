@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FoodService } from 'src/app/services/category/category.service';
-import { CategoriesModule } from './categories.module';
+import { Category } from 'src/app/interfaces/category.interface';
+import { CategoryService } from 'src/app/services/category/category.service';
+
 @Component({
   selector: 'app-categories',
   templateUrl: './categories.component.html',
@@ -8,13 +9,18 @@ import { CategoriesModule } from './categories.module';
 })
 export class CategoriesComponent implements OnInit {
 
-  categories: CategoriesModule[] = [];
-  constructor(private foodService: FoodService) {
+  categories: Category[] = [];
+  constructor(private categoryService: CategoryService) {
 
   }
 
   ngOnInit(): void {
-    this.categories = this.foodService.getAll();
+    this.categories = this.categoryService.getAll();
+
+  }
+
+  handleEvent(name: string) {
+    console.log("name=",name);
 
   }
 }

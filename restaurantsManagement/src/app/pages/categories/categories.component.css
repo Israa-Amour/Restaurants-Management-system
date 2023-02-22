@@ -1,3 +1,7 @@
+html{
+    font-size: 16px ;
+    color: black;
+}
 ul{
     display: flex;
     justify-content: center;
@@ -5,25 +9,4 @@ ul{
     flex-wrap: wrap;
     list-style-type: none;
     padding: 0;
-}
-
-li a{
-    height: 15rem;
-    width: 15rem;
-    border: 2px solid whitesmoke  ;
-    border-radius: .5rem;
-    margin: .5rem ;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    color: black;
-}
-
-html{
-    font-size: 16px ;
-    color: black;
-}
-li a:hover{
-    opacity: 0.9;
-    cursor: pointer;
 }
