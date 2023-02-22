@@ -15,7 +15,6 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     TablesRoutingModule,
-    MatCardModule,
     FormsModule,
     CommonModule,
   ]
