@@ -1,0 +1,14 @@
+<ul>
+    <li *ngFor="let category of categories ">
+        <a>
+            <div class="content">
+                <div class="name" >
+                    {{category.name}}
+                </div>
+            </div>
+
+            <img src="{{ category.imageUrl}}">
+          
+        </a>
+    </li>
+</ul>
