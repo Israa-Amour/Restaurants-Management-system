@@ -1,11 +1,7 @@
-
 <ul>
 
-    <app-category *ngFor="let category of categories"
-    [name]="category.name"
-    [imageUrl]="category.imageUrl"
-    (onClick)="handleEvent($event)">
+    <app-category *ngFor="let category of categories" [name]="category.name" [imageUrl]="category.imageUrl"
+        (onClick)="handleEvent($event)">
 
-</app-category>
+    </app-category>
 </ul>
-   

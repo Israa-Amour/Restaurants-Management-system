@@ -4,16 +4,19 @@ import { CommonModule } from '@angular/common';
 import { CategoriesRoutingModule } from './categories-routing.module';
 import { CategoriesComponent } from './categories.component';
 import { CategoryComponent } from './category/category.component';
+import { MatCard, MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
   declarations: [
     CategoriesComponent,
-    CategoryComponent
+    CategoryComponent,
+    
   ],
   imports: [
     CommonModule,
-    CategoriesRoutingModule
+    CategoriesRoutingModule,
+    MatCardModule
   ]
 })
 export class CategoriesModule { 

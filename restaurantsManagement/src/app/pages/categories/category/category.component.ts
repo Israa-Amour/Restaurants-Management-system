@@ -14,8 +14,6 @@ export class CategoryComponent {
 
 
   click() {
-    console.log("name", this.name);
-    
-this.onClick.emit(this.name)
+    this.onClick.emit(this.name)
   }
 }
