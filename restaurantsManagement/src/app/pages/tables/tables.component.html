@@ -1,11 +1,4 @@
-<div class="cards-container">
-  <div *ngFor="let card of cards" class="card" [ngClass]="{'Busy': card.status === 'Busy', 'Empty': card.status === 'Empty'}">
-    <select [(ngModel)]="card.status" (ngModelChange)="changeCardStatus(card)">
-      <option value="Empty">Empty</option>
-      <option value="Busy">Busy</option>
-    </select>
-    <div class="card-header">
-      Table {{card.id}}
-    </div>
-  </div>
-</div>
+<ul>
+    <app-table class="tables" [class.busy]="table.status === 'Busy'" *ngFor="let table of tables" [id]="table.id"
+        [status]="table.status"></app-table>
+</ul>

@@ -5,19 +5,23 @@ import { TablesRoutingModule } from './tables-routing.module';
 import { TablesComponent } from './tables.component';
 import { MatCard, MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
+import { TableComponent } from './table/table.component';
 
 
 
 @NgModule({
   declarations: [
-    TablesComponent
+    TablesComponent,
+    TableComponent
     ],
   imports: [
     CommonModule,
     TablesRoutingModule,
-    MatCardModule,
     FormsModule,
     CommonModule,
+    MatCardModule
+  
   ]
 })
-export class TablesModule { }
+export class TablesModule {  
+}

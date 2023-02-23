@@ -1,21 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Table } from 'src/app/interface/table.interface';
+import { TableService } from 'src/app/services/table/table.service';
+
 
 @Component({
   selector: 'app-tables',
   templateUrl: './tables.component.html',
   styleUrls: ['./tables.component.css']
 })
-export class TablesComponent {
+export class TablesComponent implements OnInit {
 
-  numbers = Array.from(Array(12).keys()).map(x => x + 1);
-
-  cards = this.numbers.map(id => ({ id, status: 'Empty' }));
-
-  changeCardStatus(card: any) {
-    if (card.status === 'Busy') {
-      card.status = 'Busy';
-    } else {
-      card.status = 'Empty';
-    }
+  tables:Table[] = [];
+  constructor(private table: TableService ){}
+  
+  ngOnInit():void{
+    this.tables = this.table.getAll();
   }
 }

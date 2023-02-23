@@ -1,38 +1,7 @@
-.cards-container {
+ul{
   display: flex;
+  justify-content: center;
+  align-items: center ;
   flex-wrap: wrap;
-  justify-content: center;
-}
-
-.card {
-  background-color: lightgray;
-  width: 174.96px;
-  height: 100px;
-  margin: 10px;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.card.Busy {
-  background-color: #C0F181;
-}
-
-.card.Empty {
-  background-color: lightgray;
-}
-
-.card-header {
-  margin: 0;
-  text-align: center;
-  flex: 1;
-}
-
-select {
-  background-color: inherit;
-  border: none;
-  margin: 7%;
-  align-self: flex-start;
+  list-style-type: none;
 }
