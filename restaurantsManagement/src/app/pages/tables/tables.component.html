@@ -1,4 +1,5 @@
 <ul>
-    <app-table class="tables" [class.busy]="table.status === 'Busy'" *ngFor="let table of tables" [id]="table.id"
+    <app-table class="tables" [class.busy]="table.status === 'Busy'"
+     *ngFor="let table of tables" [id]="table.id" [name]="table.name"
         [status]="table.status"></app-table>
 </ul>
