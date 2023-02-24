@@ -1,0 +1,30 @@
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5%;
+
+  border-radius: 15px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 10rem;
+  width: 13rem;
+  border: 20px solid transparent;
+}
+
+
+mat-card-content {
+  text-align: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.table-busy {
+  background-color: green;
+}
