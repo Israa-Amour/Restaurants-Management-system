@@ -1,13 +1,9 @@
 package com.RestaurantSystemDB.RestaurantSystemDB.Models;
-
 import jakarta.persistence.*;
-
 import java.io.Serializable;
 import java.util.Set;
 
 @Entity
-
-
 public class Items implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

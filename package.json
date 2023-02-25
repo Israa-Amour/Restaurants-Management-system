@@ -1,0 +1,19 @@
+{
+  "name": "restaurants-management-system",
+  "version": "1.0.0",
+  "description": "Bisan training project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Israa-Amour/Restaurants-Management-system.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Israa-Amour/Restaurants-Management-system/issues"
+  },
+  "homepage": "https://github.com/Israa-Amour/Restaurants-Management-system#readme"
+}
