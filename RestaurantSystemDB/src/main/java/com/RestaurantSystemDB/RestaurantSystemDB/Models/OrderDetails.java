@@ -17,7 +17,7 @@ public class OrderDetails implements Serializable {
         private String noteForMenu;
 
         @ManyToOne
-        @JoinColumn(name="order_id")
+        @JoinColumn(name="orderId")
         private Orders orders;
 
 
