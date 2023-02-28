@@ -1,0 +1,28 @@
+<app-search></app-search>
+<app-tags></app-tags>
+<ul>
+  <li *ngFor="let menu of menus">
+    <a >
+      <img src="{{menu.imageUrl}}" alt="">
+      <div class="content">
+        <div class="name">
+          {{menu.name}}
+        </div>
+
+
+         <div class="product-item-footer">
+          <div class="origins">
+              <span *ngFor="let origin of menu.origins">
+                   {{origin}}
+              </span>
+          </div>
+      </div>
+      <div class="price">
+          <span>
+              {{menu.price|currency}}
+          </span>
+      </div>
+      </div>
+    </a>
+  </li>
+</ul>
