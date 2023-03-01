@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Table } from 'src/app/interfaces/table.interface';
+import { Table } from 'src/app/interfaces/models/table.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,6 @@ import { Table } from 'src/app/interfaces/table.interface';
 export class TableService {
 
   private apiUrl = 'http://localhost:8084';
-
   constructor(private http: HttpClient) { }
 
   getAll(){

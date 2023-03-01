@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Table } from 'src/app/interfaces/table.interface';
+import { Table } from 'src/app/interfaces/models/table.interface';
 import { TableService } from 'src/app/services/table/table.service';
 import { HttpClient } from '@angular/common/http';
 
