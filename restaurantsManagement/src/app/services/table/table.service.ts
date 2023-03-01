@@ -1,75 +1,30 @@
 import { Injectable } from '@angular/core';
-import {Table} from 'src/app/interfaces/table.interface';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Table } from 'src/app/interface/table.interface';
+
 @Injectable({
   providedIn: 'root'
 })
 export class TableService {
 
-  constructor() { }
-    getAll(): Table[]{
-      return[
-        {
-        id:1,
-        status:'Empty',
-        name:'Table 1',
-      },
-      {
-        id:2,
-        status:'Empty',
-        name:'Table 2',
+  private apiUrl = 'http://localhost:8084';
 
-      },
-      {
-        id:3,
-        status:'Busy',
-        name:'Table 3',
+  constructor(private http: HttpClient) { }
 
-      }
-      ,
-      {
-        id:4,
-        status:'Busy',
-        name:'Table 4',
-
-      }
-      ,
-      {
-        id:5,
-        status:'Busy',
-        name:'Table 5',
-
-      }
-      ,
-      {
-        id:6,
-        status:'Busy',
-        name:'Table 6',
-
-      },
-      {
-        id:7,
-        status:'Busy',
-        name:'Table 7',
-
-      },
-      {
-        id:8,
-        status:'Busy',
-        name:'Table 8',
-
-      },
-      {
-        id:9,
-        status:'Empty',
-        name:'Table 9',
-
-      },
-      {
-        id:10,
-        status:'Busy',
-        name:'Table 10',
-
-      }
-    ]
-    }
+  getAll(){
+    return this.http.get<Table[]>(`${this.apiUrl}/tables`);
   }
+
+  add(table: Table): Observable<Table> {
+    return this.http.post<Table>(`${this.apiUrl}/addTable`, table);
+  }
+
+  update(table: Table): Observable<Table> {
+    return this.http.put<Table>(`${this.apiUrl}/updateTable/${table.id}`, table);
+  }
+
+  delete(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/deleteTable/${id}`);
+  }
+}

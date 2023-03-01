@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Table } from 'src/app/interfaces/table.interface';
 import { TableService } from 'src/app/services/table/table.service';
-
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-tables',
@@ -11,9 +11,12 @@ import { TableService } from 'src/app/services/table/table.service';
 export class TablesComponent implements OnInit {
 
   tables:Table[] = [];
-  constructor(private table: TableService ){}
-  
+  constructor(private tableService: TableService ){}
   ngOnInit():void{
-    this.tables = this.table.getAll();
+    this.tableService.getAll()
+      .subscribe((tables: Table[]) => {
+        this.tables = tables;
+        console.log(this.tables)
+      });
   }
 }
