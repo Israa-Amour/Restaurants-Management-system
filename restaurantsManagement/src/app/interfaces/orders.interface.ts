@@ -4,4 +4,3 @@ export interface Order {
     total: number;
     details: string;
   }
-  
