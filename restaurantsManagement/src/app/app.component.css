@@ -10,7 +10,6 @@
   padding: 16px;
   text-align: center;
 }
-
 .sidenav .mat-toolbar {
   background: inherit;
 
@@ -30,7 +29,6 @@ mat-nav-list{
   height: 20px;
   display: flex;
 }
-
 
 .menu-button:hover{
   background: white;
