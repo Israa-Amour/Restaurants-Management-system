@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Order } from 'src/app/interface/orders.interface';
+import { Order } from 'src/app/interfaces/orders.interface';
 import { OrdersService } from 'src/app/services/orders/orders.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { OrdersService } from 'src/app/services/orders/orders.service';
   styleUrls: ['./orders.component.css']
 })
 export class OrdersComponent implements OnInit {
-  
+
   displayedColumns: string[] = ['orderId', 'table', 'total', 'details', 'pay'];
   orders: Order[] = [];
 

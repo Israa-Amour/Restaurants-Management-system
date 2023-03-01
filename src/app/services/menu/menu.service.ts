@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Tag } from 'src/app/interface/models/Tag';
-import { Menu } from 'src/app/interface/models/Menu';
+import { Tag } from 'src/app/interfaces/models/Tag';
+import { Menu } from 'src/app/interfaces/models/Menu';
 @Injectable({
   providedIn: 'root'
 })

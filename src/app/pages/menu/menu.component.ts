@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MenuService } from 'src/app/services/menu/menu.service';
 import { ActivatedRoute } from '@angular/router';
-import { Menu } from 'src/app/interface/models/Menu';
+import { Menu } from 'src/app/interfaces/models/Menu';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
