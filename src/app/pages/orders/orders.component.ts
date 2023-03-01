@@ -9,13 +9,14 @@ import { OrdersService } from 'src/app/services/orders/orders.service';
 })
 export class OrdersComponent implements OnInit {
 
-  displayedColumns: string[] = ['orderId', 'table', 'total', 'details', 'pay'];
+  displayedColumns: string[] = ['OrderID','total', 'details', 'pay'];
   orders: Order[] = [];
-
   constructor(private ordersService: OrdersService) { }
-
   ngOnInit(): void {
-    this.orders = this.ordersService.getAll();
+    this.ordersService.getAll()
+      .subscribe((orders: Order[]) => {
+        this.orders = orders;
+        console.log(this.orders)
+      });
   }
-
 }

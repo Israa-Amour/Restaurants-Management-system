@@ -3,16 +3,9 @@
 }
 .sidenav {
   width: 200px;
-  margin: 16px;
-  background-color:#f3f3f5;
-  border-right: none;
-  border-radius: 10px;
-  padding: 16px;
-  text-align: center;
 }
 .sidenav .mat-toolbar {
   background: inherit;
-
 }
 .mat-toolbar.mat-primary {
   position: sticky;
@@ -22,14 +15,4 @@
 
 mat-nav-list{
   margin-top: 20%;
-}
-
-.mat-toolbar{
-  background-color: white;
-  height: 20px;
-  display: flex;
-}
-
-.menu-button:hover{
-  background: white;
 }

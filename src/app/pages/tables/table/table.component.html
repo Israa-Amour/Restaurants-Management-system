@@ -1,6 +1,6 @@
 <div class="cards-container">
   <mat-card class="table" [ngClass]="{'table-busy': tableStatus === true}">
-    <mat-card-title>{{tableStatus}}</mat-card-title>
+    <mat-card-title>{{ tableStatus ? 'Busy' : 'Empty' }}</mat-card-title>
     <mat-card-content class="tableName"> {{tableName}} </mat-card-content>
   </mat-card>
 </div>

@@ -1,64 +1,33 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Order } from 'src/app/interfaces/models/orders.interface';
+import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class OrdersService {
 
-  constructor() { }
-  orders: Order[]=[
-      {
-        orderId: 1,
-        total: 200,
-        table: 'Table 1',
-        details: 'not spicy',
-      },
-      {
-        orderId: 2,
-        total: 200,
-        table: 'Table 1',
-        details: 'not spicy',
-      },
-      {
-        orderId: 3,
-        total: 20,
-        table: 'Table 1',
-        details: 'not spicy',
-      },
-      {
-        orderId: 4,
-        total: 200,
-        table: 'Table 1',
-        details: 'not spicy',
-      },
-      {
-        orderId: 5,
-        total: 60,
-        table: 'Table 1',
-        details: 'not spicy',
-      },
-      {
-        orderId: 6,
-        total: 40,
-        table: 'Table 3',
-        details: 'not spicy',
-      },
-      {
-        orderId: 7,
-        total: 80,
-        table: 'Table 7',
-        details: 'not spicy',
-      },
-      {
-        orderId: 8,
-        total: 24,
-        table: 'Table 2',
-        details: 'not spicy',
-      }
-    ];
-    getAll(): Order[]{
-      return this.orders;
-    }
+  constructor(private http: HttpClient) { }
+
+  getAll(): Observable<Order[]> {
+    return this.http.get<Order[]>(`${environment.serverUrl}/orders`);
+  }
+
+  add(order: Order): Observable<Order> {
+    return this.http.post<Order>(`${environment.serverUrl}/addOrder`, order);
+  }
+  getOrderById(id: number): Observable<Order> {
+    return this.http.get<Order>(`${environment.serverUrl}/findOrder/${id}`);
+  }
+  update(order: Order): Observable<Order> {
+    return this.http.put<Order>(`${environment.serverUrl}/updateOrder/${order.id}`, order);
+  }
+
+  delete(id: number): Observable<void> {
+    return this.http.delete<void>(`${environment.serverUrl}/deleteOrder/${id}`);
+  }
 
 }

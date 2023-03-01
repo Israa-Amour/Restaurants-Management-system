@@ -1,6 +1,5 @@
 export interface Order {
-    orderId: number;
-    table: string;
+    id: number;
     total: number;
-    details: string;
+    OrderNote: string;
   }

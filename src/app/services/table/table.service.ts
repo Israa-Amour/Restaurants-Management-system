@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Table } from 'src/app/interfaces/models/table.interface';
-import { Table } from 'src/app/interfaces/table.interface';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -10,7 +9,6 @@ import { environment } from 'src/environments/environment';
 })
 export class TableService {
 
-  private apiUrl = 'http://localhost:8084';
   constructor(private http: HttpClient) { }
 
   getAll(){
