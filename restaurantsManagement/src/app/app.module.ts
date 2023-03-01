@@ -11,10 +11,16 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
-
+import { MenuComponent } from './pages/menu/menu.component';
+import { SearchComponent } from './pages/search/search.component';
+import { FormsModule } from '@angular/forms';
+import { TagsComponent } from './pages/tags/tags.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent,
+    SearchComponent,
+    TagsComponent,
     ],
   imports: [
     BrowserModule,
@@ -25,7 +31,8 @@ import { MatCardModule } from '@angular/material/card';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule ,
+    FormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]
