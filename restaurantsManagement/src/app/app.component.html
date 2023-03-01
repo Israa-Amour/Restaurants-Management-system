@@ -1,12 +1,20 @@
 <mat-toolbar class="toolbar">
+  <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
 </mat-toolbar>
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
+<mat-sidenav-container  class="sidenav-container">
+  <mat-sidenav #sidenav="matSidenav" #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-nav-list>
-      <a mat-list-item routerLink="/tables">Tables</a>
+    <mat-nav-list style="font-weight: bold;">
+      <a mat-list-item routerLink="/tables" >Tables</a>
         <a mat-list-item routerLink="/menu">Menu</a>
         <a mat-list-item routerLink="/orders">Orders</a>
     </mat-nav-list>
