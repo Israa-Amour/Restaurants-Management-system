@@ -10,6 +10,4 @@ export class TableComponent {
   @Input() id=0 ;
   @Input() status='';
   @Input() name='';
-
-  
 }
