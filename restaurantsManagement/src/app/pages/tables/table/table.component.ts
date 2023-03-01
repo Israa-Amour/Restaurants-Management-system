@@ -8,6 +8,6 @@ import { Component, Input } from '@angular/core';
 export class TableComponent {
  
   @Input() id=0 ;
-  @Input() status='';
-  @Input() name='';
+  @Input() tableStatus=false;
+  @Input() tableName='';
 }

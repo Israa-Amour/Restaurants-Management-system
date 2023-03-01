@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { TablesRoutingModule } from './tables-routing.module';
 import { TablesComponent } from './tables.component';
-import { MatCard, MatCardModule } from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { TableComponent } from './table/table.component';
 
