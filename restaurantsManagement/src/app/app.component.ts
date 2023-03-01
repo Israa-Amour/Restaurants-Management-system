@@ -9,7 +9,6 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'restaurantsManagement';
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
