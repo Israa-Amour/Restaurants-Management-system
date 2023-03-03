@@ -1,11 +1,11 @@
 <app-search></app-search>
-<div class="categories" *ngIf="categories" >
+<div class="categories" *ngIf="categories">
   <a *ngFor="let category of categories" routerLink="/categories/{{category.categoryID}}">
     {{category.categoryName}}
   </a>
 </div>
 <ul>
-  <li *ngFor="let item of items" >
+  <li *ngFor="let item of items">
     <a>
       <img src="{{item.itemImageURL}}" alt="">
       <div class="content">
