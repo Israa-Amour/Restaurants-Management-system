@@ -14,16 +14,4 @@ export class TableService {
   getAll(){
     return this.http.get<Table[]>(`${environment.serverUrl}/tables`);
   }
-
-  add(table: Table): Observable<Table> {
-    return this.http.post<Table>(`${environment.serverUrl}/addTable`, table);
-  }
-
-  update(table: Table): Observable<Table> {
-    return this.http.put<Table>(`${environment.serverUrl}/updateTable/${table.id}`, table);
-  }
-
-  delete(id: number): Observable<void> {
-    return this.http.delete<void>(`${environment.serverUrl}/deleteTable/${id}`);
-  }
 }
