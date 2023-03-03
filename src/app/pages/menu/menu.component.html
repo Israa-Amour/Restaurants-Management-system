@@ -1,12 +1,16 @@
 <app-search></app-search>
-<app-tags></app-tags>
+<div class="categories" *ngIf="categories" >
+  <a *ngFor="let category of categories" routerLink="/categories/{{category.categoryID}}">
+    {{category.categoryName}}
+  </a>
+</div>
 <ul>
-  <li *ngFor="let menu of menus">
+  <li *ngFor="let item of items" >
     <a>
-      <img src="{{menu.imageUrl}}" alt="">
+      <img src="{{item.itemImageURL}}" alt="">
       <div class="content">
-        <div class="name">{{menu.name}}</div>
-        <div class="price"><span>{{menu.price | currency}}</span></div>
+        <div class="name">{{item.itemName}}</div>
+        <div class="price"><span>{{item.itemPrice | currency}}</span></div>
       </div>
     </a>
   </li>

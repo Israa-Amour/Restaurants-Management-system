@@ -14,16 +14,14 @@ import { MatCardModule } from '@angular/material/card';
 import { MenuComponent } from './pages/menu/menu.component';
 import { SearchComponent } from './pages/search/search.component';
 import { FormsModule } from '@angular/forms';
-import { TagsComponent } from './pages/tags/tags.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    SearchComponent,
-    TagsComponent,
-    ],
+    SearchComponent
+        ],
   imports: [
     BrowserModule,
     AppRoutingModule,

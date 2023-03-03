@@ -8,7 +8,6 @@ ul {
 }
 
 li a {
-  height: 25;
   width: 15rem;
   border: 1px solid whitesmoke;
   border-radius: 1rem;
@@ -17,6 +16,11 @@ li a {
   flex-direction: column;
   overflow: hidden;
   background-color: #f0f0f0;
+}
+li a img {
+  max-width: 26rem;
+  max-height:  10rem;
+  object-fit: contain;
 }
 
 li a:hover {
@@ -43,4 +47,18 @@ li a:hover {
 .name {
   flex: 1 1 auto;
   margin-right: 1rem;
+}
+
+.categories{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.categories a{
+  background-color: #f0f0f0;
+  padding: .3rem 1rem;
+  margin: .2rem .15rem;
+  border-radius: 10rem;
+  color: blue;
 }
