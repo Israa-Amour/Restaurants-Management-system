@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,14 +14,21 @@ import { MenuComponent } from './pages/menu/menu.component';
 import { SearchComponent } from './pages/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {MatDialogModule} from '@angular/material/dialog';
+import { OrdersPayDetailsComponent } from './orders-pay-details/orders-pay-details.component';
+import { OrdersPaymentDetailsComponent } from './pages/orders-payment-details/orders-payment-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    SearchComponent
+    SearchComponent,
+    OrdersPayDetailsComponent,
+    OrdersPaymentDetailsComponent,
+
         ],
   imports: [
+    MatDialogModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
