@@ -15,7 +15,7 @@ export class MenuService {
     return this.http.get<Category[]>(`${environment.serverUrl}/categories`);
   }
 
-  getAll(): Observable<Item[]> {
+  getAllItems(): Observable<Item[]> {
     return this.http.get<Item[]>(`${environment.serverUrl}/items`);
   }
 

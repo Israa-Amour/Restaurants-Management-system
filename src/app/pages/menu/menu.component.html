@@ -1,4 +1,5 @@
 <div class="categories" *ngIf="categories">
+  <a (click)="getAllItems()">All</a>
   <a *ngFor="let category of categories" routerLink="/categories/{{category.categoryID}}">
     {{category.categoryName}}
   </a>

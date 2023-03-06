@@ -27,7 +27,7 @@ export class MenuComponent implements OnInit {
         });
       }
       else {
-        this.menuService.getAll().subscribe(items => {
+        this.menuService.getAllItems().subscribe(items => {
           this.items = items;
         });
       }
@@ -37,4 +37,10 @@ export class MenuComponent implements OnInit {
       this.categories = categories;
     });
   }
+
+  getAllItems(){
+    this.menuService.getAllItems().subscribe(items => {
+      this.items = items;
+  });
+}
 }
