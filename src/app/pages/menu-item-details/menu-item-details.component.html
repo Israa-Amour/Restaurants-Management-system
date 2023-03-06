@@ -1,0 +1,35 @@
+
+
+<div *ngIf="menu" class="container">
+    <img [src]="menu.imageUrl" [alt]="menu.name" />
+
+    <div class="details">
+        <div class="header">
+            <span class="name">
+                {{menu.name}}
+            </span>
+            
+        </div>
+      
+
+        <div class="origins">
+            <span *ngFor="let origin of menu.origins">
+                {{origin}}
+            </span>
+        </div>
+
+        <div class="tags">
+            <app-tags [menuItemDetailsTags]="menu.tags" justifyContent="start" ></app-tags>
+        </div>
+
+        
+
+        <div class="price">
+            <span>{{menu.price|currency}}</span>
+        </div>
+
+        <button (click)="addToOrder()" >Add To Order</button>
+
+    </div>
+
+</div>

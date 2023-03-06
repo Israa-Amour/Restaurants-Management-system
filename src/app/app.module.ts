@@ -13,12 +13,18 @@ import { MatListModule } from '@angular/material/list';
 import { MenuComponent } from './pages/menu/menu.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MenuItemDetailsComponent } from './pages/menu-item-details/menu-item-details.component';
+import { OrdersComponent } from './pages/orders/orders.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
-          ],
+    MenuComponent,
+    SearchComponent,
+    TagsComponent,
+    MenuItemDetailsComponent,
+    OrdersComponent,
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
