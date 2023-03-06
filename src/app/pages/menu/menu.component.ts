@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { MenuService } from 'src/app/services/menu/menu.service';
-import { Item } from 'src/app/interfaces/models/item.interface';
-import { Category } from 'src/app/interfaces/models/category.interface';
+import { Item } from 'src/app/interfaces/item.interface';
+import { Category } from 'src/app/interfaces/category.interface';
+import { MenuService } from 'src/app/services/items/menu.service';
 
 @Component({
   selector: 'app-menu',

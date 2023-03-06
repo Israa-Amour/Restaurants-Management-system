@@ -1,14 +1,15 @@
-import { Menu } from "./Menu";
+import { Item } from "./item.interface";
+
 export class OrderItems{
-    constructor(menu:Menu){
+    constructor(menu:Item){
       this.menu = menu;  
     }
     
-    menu:Menu;
+    menu:Item;
     quantity:number = 1;
 
     // price specific order item 
     get price():number{
-        return this.menu.price * this.quantity;
+        return this.menu.itemPrice * this.quantity;
     }
 }

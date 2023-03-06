@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Item } from 'src/app/interfaces/models/item.interface';
 import { Order } from 'src/app/interfaces/models/Order';
-import { Menu } from 'src/app/interfaces/models/Menu';
 import { OrderItems } from 'src/app/interfaces/models/OrderItems';
 @Injectable({
   providedIn: 'root'
@@ -9,14 +9,14 @@ export class OrderService {
 
   private order:Order = new Order();
   
-  addToOrder(menu: Menu):void{
-    let orderItem = this.order.items.find(item => item.menu.id === menu.id);
+  addToOrder(item: Item):void{
+    let orderItem = this.order.items.find(itemObj => itemObj.menu.id === item.id);
     
     if(orderItem){
-      this.changeQuantity(menu.id, orderItem.quantity + 1);
+      this.changeQuantity(item.id, orderItem.quantity + 1);
       return;
     }
-    this.order.items.push(new OrderItems(menu));
+    this.order.items.push(new OrderItems(item));
   }
 
   removeFromOrder(menuId:number): void{

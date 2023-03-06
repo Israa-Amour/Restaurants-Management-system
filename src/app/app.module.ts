@@ -13,15 +13,11 @@ import { MatListModule } from '@angular/material/list';
 import { MenuComponent } from './pages/menu/menu.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { MenuItemDetailsComponent } from './pages/menu-item-details/menu-item-details.component';
-import { OrdersComponent } from './pages/orders/orders.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    MenuItemDetailsComponent,
-    OrdersComponent,
     ],
   imports: [
     BrowserModule,
@@ -35,7 +31,6 @@ import { OrdersComponent } from './pages/orders/orders.component';
     MatIconModule,
     MatListModule ,
     FormsModule,
-    MatDialogModule,
     MatCardModule
     ],
   providers: [],
