@@ -10,13 +10,11 @@ const routes: Routes = [
   { path: 'categories/:categoryID', component: MenuComponent },
   { path: 'tables',
  loadChildren: () => import('./pages/tables/tables.module').then(m => m.TablesModule) },
-  { path: 'orders', component:OrdersComponent } , 
+  { path: 'orders', component:OrdersComponent } ,
  {path:'menu/:id',component:MenuItemDetailsComponent}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { 
-  
-}
+export class AppRoutingModule { }

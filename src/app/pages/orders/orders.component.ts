@@ -10,27 +10,21 @@ import { OrderService } from 'src/app/services/order/order.service';
   styleUrls: ['./orders.component.css']
 })
 export class OrdersComponent implements OnInit {
-order!:Order;
-  constructor(private orderService: OrderService ) {
-    this.setOrder();
+
+  isPayClicked = false
+
   displayedColumns: string[] = ['OrderID','total', 'details', 'pay'];
   orders: Order[] = [];
   constructor(private ordersService: OrdersService) { }
-  removeFromOrder(orderItems:OrderItems){
-    this.orderService.removeFromOrder(orderItems.menu.id);
-    this.setOrder();
-  }
-
-  changeQuantity(orderItems:OrderItems, quantityInString:string){
-    const quantity= parseInt(quantityInString);
-    this.orderService.changeQuantity(orderItems.menu.id, quantity);
-    this.setOrder();
-  }
-
-  setOrder(){
-    this.order = this.orderService.getOrder();
-  }
   ngOnInit(): void {
+    this.ordersService.getAll()
+      .subscribe((orders: Order[]) => {
+        this.orders = orders;
+        console.log(this.orders)
+      });
+
   }
-}
+   goToPayments(){
+    this.isPayClicked = !this.isPayClicked
+  }
 }

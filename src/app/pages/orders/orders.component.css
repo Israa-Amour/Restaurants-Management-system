@@ -15,7 +15,7 @@ ul{
     list-style-type: none;
     margin: .5rem;
     padding: 0;
-    
+
 }
 
 ul li{
@@ -27,7 +27,9 @@ ul li{
 }
 
 ul li:last-child{
-   border: none; 
+   border: none;
+table {
+  border-radius: 20px;
 }
 
 ul li img{
@@ -37,17 +39,15 @@ ul li img{
     object-fit: cover;
 }
 
-ul li div{
-    padding: 1rem;
+th {
+  text-align: center;
+  padding: 5px;
+  background-color: #EAF0F0;
+  color: black;
 }
-
-ul li div:not(:first-child){
-    flex-basis: 18%;
-}
-
-ul li select{
-    width: 3rem;
-    outline: none;
+.paymentButton {
+  background-color: #8AE6F9;
+  border-radius: 10px;
     border: none;
     border-bottom: 1px solid lightgrey;
     font-size: 1.1rem;
