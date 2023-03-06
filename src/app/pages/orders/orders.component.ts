@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Order } from 'src/app/interfaces/models/orders.interface';
 import { OrdersService } from 'src/app/services/orders/orders.service';
-import {MatDialog} from '@angular/material/dialog';
-import { OrdersPaymentDetailsComponent } from 'src/app/pages/orders-payment-details/orders-payment-details.component';
 
 @Component({
   selector: 'app-orders',
@@ -11,16 +9,13 @@ import { OrdersPaymentDetailsComponent } from 'src/app/pages/orders-payment-deta
 })
 export class OrdersComponent implements OnInit {
 
-  displayedColumns: string[] = ['OrderID','total', 'details', 'pay'];
+  isPayClicked = false
+
+  displayedColumns: string[] = ['OrderID', 'total', 'details', 'pay'];
   orders: Order[] = [];
-  constructor(private ordersService: OrdersService,private matDialog:MatDialog) {
+  constructor(private ordersService: OrdersService) {
 
-   }
-   onClickDialogOpen(){
-    this.matDialog.open(OrdersPaymentDetailsComponent);
-
-
-}
+  }
   ngOnInit(): void {
     this.ordersService.getAll()
       .subscribe((orders: Order[]) => {
@@ -29,5 +24,7 @@ export class OrdersComponent implements OnInit {
       });
 
   }
-
+   goToPayments(){
+    this.isPayClicked = !this.isPayClicked
+   }
 }

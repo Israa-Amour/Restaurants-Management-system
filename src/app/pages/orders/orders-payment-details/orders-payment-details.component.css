@@ -1,0 +1,45 @@
+
+.alignleft {
+  margin: 10px;
+  float: right;
+  font-size: large;
+}
+
+.card-body{
+  margin:30px;
+}
+
+.alignright {
+  margin: 10px;
+  float: left;
+  font-size: larger;
+}
+.custom-card{
+  width: 300px;
+  height: 500px;
+  border: 1px solid grey;
+  box-shadow: 0 20px 50px 0 rgba(2, 0, 0, 0.2);
+  transform: translateX(400px);
+  position: relative;
+  top: 50px;
+}
+.paymentButton {
+  background-color: #8AE6F9;
+}
+.buttton-card{
+  margin:10px;
+}
+.cancleButton {
+  background-color: red;
+}
+
+.paymentButton,.cancleButton{
+  color:white;
+  border-radius: 10px;
+  border: none;
+  margin:10p;
+  display: block;
+  width: 80px;
+  height: 40px;
+  font-size: 14px;
+}

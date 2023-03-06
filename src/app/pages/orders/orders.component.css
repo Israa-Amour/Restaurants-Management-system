@@ -1,5 +1,4 @@
 table {
-  width: 775px;
   border-radius: 20px;
 }
 
@@ -8,15 +7,12 @@ table {
   padding: 5px;
   background-color: #FAFAFA;
 }
-
 th {
   text-align: center;
   padding: 5px;
   background-color: #EAF0F0;
   color: black;
 }
-
-
 .paymentButton {
   background-color: #8AE6F9;
   border-radius: 10px;
