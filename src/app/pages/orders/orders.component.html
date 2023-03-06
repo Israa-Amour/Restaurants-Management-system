@@ -1,29 +1,46 @@
-<table mat-table [dataSource]="orders" >
-  <ng-container matColumnDef="orderId">
-    <th mat-header-cell *matHeaderCellDef> Order ID </th>
-    <td mat-cell *matCellDef="let order"> {{order.orderId}} </td>
-  </ng-container>
+<div class="container">
+    <ul>
+        <li *ngFor="let orderItem of order.items">
+            <div>
+                <img [src]="orderItem.menu.imageUrl" [alt]="orderItem.menu.name">
+            </div>
 
-  <ng-container matColumnDef="table">
-    <th mat-header-cell *matHeaderCellDef> Table </th>
-    <td mat-cell *matCellDef="let order"> {{order.table}} </td>
-  </ng-container>
+            <div>
+                <a routerLink="/menu/{{orderItem.menu.id}}">
+                    {{orderItem.menu.name}}
+                </a>
+            </div>
 
-  <ng-container matColumnDef="total">
-    <th mat-header-cell *matHeaderCellDef> Total </th>
-    <td mat-cell *matCellDef="let order"> {{order.total}} </td>
-  </ng-container>
+            <div>
+                <select #quantitySelect (change)="changeQuantity(orderItem,quantitySelect.value)">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
 
-  <ng-container matColumnDef="details">
-    <th mat-header-cell *matHeaderCellDef> Details </th>
-    <td mat-cell *matCellDef="let order"> {{order.details}} </td>
-  </ng-container>
+            <div>
+                {{orderItem.price | currency}}
+            </div>
 
-  <ng-container matColumnDef="pay">
-    <th mat-header-cell *matHeaderCellDef></th>
-    <td mat-cell *matCellDef="let order"><button class="paymentButton"mat-raised-button>Pay</button></td>
-  </ng-container>
+            <div>
+                <button class="remove-button" (click)="removeFromOrder(orderItem)">
+                    Remove
+                </button>
+            </div>
+        </li>
+    </ul>
+
+    <div class="checkout">
+        <div>
+            <div class="foods-count">{{order.items.length}}</div>
+            <div class="total-price">{{order.totalPrice| currency}}</div>
+        </div>
+    </div>
+     
+</div>
   
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+
+   

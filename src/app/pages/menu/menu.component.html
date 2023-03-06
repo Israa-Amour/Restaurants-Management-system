@@ -2,7 +2,7 @@
 <app-tags></app-tags>
 <ul>
   <li *ngFor="let menu of menus">
-    <a >
+    <a routerLink="/menu/{{menu.id}}">
       <img src="{{menu.imageUrl}}" alt="">
       <div class="content">
         <div class="name">

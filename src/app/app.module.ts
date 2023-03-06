@@ -16,6 +16,8 @@ import { SearchComponent } from './pages/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { TagsComponent } from './pages/tags/tags.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MenuItemDetailsComponent } from './pages/menu-item-details/menu-item-details.component';
+import { OrdersComponent } from './pages/orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     MenuComponent,
     SearchComponent,
     TagsComponent,
+    MenuItemDetailsComponent,
+    OrdersComponent,
     ],
   imports: [
     BrowserModule,

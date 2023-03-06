@@ -7,6 +7,11 @@ import { Menu } from 'src/app/interfaces/models/Menu';
 export class MenuService {
 
   constructor() { }
+
+  getMenuById(id: number) : Menu{
+    return this.getAll().find(
+      menu => menu.id == id)! ; 
+  }
   getAllMenuBySearchTerm(searchTerm:string) :Menu[]{
     return  this.getAll().filter(menu =>
       menu.name.toLowerCase().includes(searchTerm.toLowerCase()));
